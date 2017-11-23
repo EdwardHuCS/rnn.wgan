@@ -106,10 +106,11 @@ def load_dataset(max_length, max_n_examples, tokenize=False, max_vocab_size=2048
     number_of_divided_files = 100 if dataset == 'training' else 50
 
     for i in range(number_of_divided_files-1):
-        path = data_dir + ("/{}-monolingual.tokenized.shuffled/news.en{}-{}-of-{}".format(dataset,
-                                                                                          '' if dataset == 'training' else '.heldout',
-                                                                                          str(i + 1).zfill(5),
-                                                                                          str(number_of_divided_files).zfill(5)))
+        # path = data_dir + ("/{}-monolingual.tokenized.shuffled/news.en{}-{}-of-{}".format(dataset,
+        #                                                                                   '' if dataset == 'training' else '.heldout',
+        #                                                                                   str(i + 1).zfill(5),
+        #                                                                                   str(number_of_divided_files).zfill(5)))
+        path = data_dir + ("data.txt")
         with open(path, 'r') as f:
             for line in f:
                 line = line[:max_length]

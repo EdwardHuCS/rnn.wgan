@@ -13,7 +13,7 @@ flags = tf.app.flags
 
 
 flags.DEFINE_string('LOGS_DIR', './logs/', '')
-flags.DEFINE_string('DATA_DIR', './data/1-billion-word-language-modeling-benchmark-r13output/', "")
+flags.DEFINE_string('DATA_DIR', './datadir/', "")
 flags.DEFINE_string('CKPT_PATH', "./ckpt/", "")
 flags.DEFINE_integer('BATCH_SIZE', 64, '')
 flags.DEFINE_integer('CRITIC_ITERS', 10, """When training wgan, it is helpful to use 
