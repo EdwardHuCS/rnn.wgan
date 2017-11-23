@@ -34,7 +34,7 @@ flags.DEFINE_boolean('TRAIN_FROM_CKPT', False, '')
 flags.DEFINE_integer('GEN_RNN_LAYERS', 1, '')
 flags.DEFINE_integer('DISC_RNN_LAYERS', 1, '')
 flags.DEFINE_integer('DISC_STATE_SIZE', 512, '')
-flags.DEFINE_integer('GEN_STATE_SIZE', 512, '')
+flags.DEFINE_integer('GEN_STATE_SIZE', 1024, '')
 flags.DEFINE_string('RNN_CELL', 'gru', """Choose between 'gru' or 'rhn'.
     'gru' option refers to a vanilla gru implementation
     'rhn' options refers to a multiplicative integration 2-layer highway rnn
@@ -57,7 +57,7 @@ flags.DEFINE_integer('PRINT_ITERATION', 100, '')
 
 
 # Fisher GAN Flags
-flags.DEFINE_string('GAN_TYPE', 'wgan', "Type of GAN to use. Choose between 'wgan' and 'fgan' for wasserstein and fisher respectively")
+flags.DEFINE_string('GAN_TYPE', 'fgan', "Type of GAN to use. Choose between 'wgan' and 'fgan' for wasserstein and fisher respectively")
 flags.DEFINE_float('FISHER_GAN_RHO', 1e-6, "Weight on the penalty term for (sigmas -1)**2")
 
 # Learning Rates
