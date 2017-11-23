@@ -23,7 +23,7 @@ flags.DEFINE_integer('MAX_N_EXAMPLES', 10000000, '')
 flags.DEFINE_string('GENERATOR_MODEL', 'Generator_RNN_CL_VL_TH', '')
 flags.DEFINE_string('DISCRIMINATOR_MODEL', 'Discriminator_RNN', '')
 flags.DEFINE_string('PICKLE_PATH', './pkl', '')
-flags.DEFINE_integer('GEN_ITERS', 50, """When training wgan, it is helpful to use 
+flags.DEFINE_integer('GEN_ITERS', 2, """When training wgan, it is helpful to use 
     50 gen_iters, however, when training with fgan, 2 gen_iters may be more suitable.""")
 flags.DEFINE_integer('ITERATIONS_PER_SEQ_LENGTH', 15000, '')
 flags.DEFINE_float('NOISE_STDEV', 10.0, '')
